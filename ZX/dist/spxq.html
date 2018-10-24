@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<link rel="stylesheet" href="stylesheet/reset.css">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<link rel="stylesheet" href="stylesheet/spxq.css">
+	<script src = 'js/jquery-1.10.1.min.js'></script>
+	<script src = 'js/spxq.js'></script>
+	<script src = 'js/startMove.js'></script>
+	<script src = "js/ajax.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url:"data/nav1.json",
+				success:function(arr){
+					// alert(arr);
+					for(var i = 0; i < arr.length; i++){
+						$(`<dl>
+							// <dt><a href="${arr[i].href}">${arr[i].title}</a></dt>
+							<dd>
+								<a href="">${arr[i].text1}</a>
+								<a href="">${arr[i].text2}</a>
+								<a href="">${arr[i].text3}</a>
+								<a href="">${arr[i].text4}</a>
+								<a href="">${arr[i].text5}</a>
+								<a href="">${arr[i].text6}</a>
+								<a href="">${arr[i].text7}</a>
+								<a href="">${arr[i].text8}</a>
+								<a href="">${arr[i].text9}</a>
+								<a href="">${arr[i].text10}</a>
+								<a href="">${arr[i].text11}</a>
+								<a href="">${arr[i].text12}</a>
+							</dd>
+						</dl>`).appendTo($("#bz_box1"));
+					}
+				}
+			})
+			$.ajax({
+				url:"data/nav2.json",
+				success:function(arr){
+					// alert(arr);
+					for(var i = 0; i < arr.length; i++){
+						$(`<dl>
+								<dt><a href="">${arr[i].text1}</a></dt>
+								<dd><a href="">${arr[i].text2}</a></dd>
+						</dl>`).appendTo($("#bz_box2"));
+					}
+				}
+			})	
+		})
+	</script>
+</head>
+<body class="iconfont">
+	<!-- header -->
+		<header>
+			<h2 class="h21"><a class="a1" href="http://localhost/ZX/dlzc.html">登录/注册</a></h2>
+			<h2 class="h22"><a class="a1" href="">&#xead9;购物袋<span>0</span>件</a>
+				<div class="gwd">购物袋暂时没有商品</div>
+			</h2>
+			<h2 class="h23"><a class="a1" href="">我的走秀&#xe614;</a>
+				<ol>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">自助退货</a></li>
+					<li><a href="">我的收藏</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li><a href="">全部吐槽</a></li>
+				</ol>
+			</h2>
+			<div >
+				<h1><a href=""><img src="images/logo.jpg" alt=""></a></h1>
+				<ol>
+					<li><a href="http://localhost/ZX/index.html">首页</a></li>
+					<li><a href="http://localhost/ZX/xpgwc.html">新品</a></li>
+					<li><a href="">男士</a></li>
+					<li><a href="">女士</a></li>
+					<li><a href="">品牌</a></li>
+					<li><a href="">专题</a></li>
+					<li class="last"><a href="">手机走秀</a></li>
+				</ol>
+			</div>
+			<form action="">
+				<input type="text" placeholder="请搜索Kenzo试试">
+				<button class="iconfont">&#xe61e;</button>
+			</form>
+		</header>
+	<!-- nav -->
+   		<nav>
+			<ul>
+				<li id="nav_li1" class="li1"><a href="">包装</a></li>
+				<li id="nav_li2"><a href="">服装</a></li>
+				<li id="nav_li3"><a href="">鞋靴</a></li>
+				<li><a href="">腕表</a></li>
+				<li><a href="">配饰</a></li>
+				<li><a href="">妆品</a></li>
+				<li><a href="">生活</a></li>
+				<li><a href="">婴童</a></li>
+				<li class="last"><a href="">豪车</a></li>
+			</ul>
+			<div id="bz" class="bz">
+				<div id="bz_box1" class="box1">
+					
+				</div>
+				<div id="bz_box2" class="box2">
+					<p>热门品牌：</p>
+					<dl>
+						<dt><a href="">Prada</a></dt>
+						<dd><a href="">Prada</a></dd>
+					</dl>
+				</div>
+			</div>
+		</nav>
+	<!-- section -->
+		<section>
+			<div class="box1">
+				<span class="span1">&#xe67d;</span>您的位置:
+				<span class="span2">
+					<a href="">走秀首页</a>>
+					<a href="http://localhost/ZX/splb.html">女包</a>>
+					<a href="">肩挎包</a>>
+					<a href="">链条包</a>>
+					<span class="span3">女士Dionysus刺绣链条单肩斜挎包</span>
+				</span>
+			</div>
+			<div class="box2">
+				<div class="orig">
+					<img id="orig_img1" src="images/g1_402_536.jpg" alt="" >
+					<img id="orig_img2" src="images/g2_402_536.jpg" alt="">
+					<img id="orig_img3" src="images/g3_402_536.jpg" alt="">
+					<img id="orig_img4" src="images/g4_402_536.jpg" alt="">
+					<img id="orig_img5" src="images/g5_402_536.jpg" alt="">
+					<div class="blocks"></div>
+				</div>
+				<div class="fd">
+					<img id="fd_img1" src="images/g1_402_536.jpg" alt="" style="position: absolute;">
+					<img id="fd_img2" src="images/g2_402_536.jpg" alt="">
+					<img id="fd_img3" src="images/g3_402_536.jpg" alt="">
+					<img id="fd_img4" src="images/g4_402_536.jpg" alt="">
+					<img id="fd_img5" src="images/g5_402_536.jpg" alt="">
+				</div>
+				<div class="cbox">
+					<h1>女士Dionysus刺绣链条单肩斜挎包<span>[ 限时9.5折 折上9折 ]</span></h1>
+					<div class="cbox1">
+						<p>品牌：<span><a href="">Gucci(古驰)</a></span></p>
+					</div>
+					<div class="cbox2">
+						<div class="div1">
+							<p>限时抢购：</p>
+							<h2>￥28025</h2>
+						</div>
+						<div class="div2">
+							<p>走秀价：</p>
+							<h2>￥29500</h2>
+						</div>
+						<div class="div3">
+							<p>促销：</p>
+							<h2><span>打折</span>折上9折</h2>
+						</div>
+						<div class="div4">
+							<p>发货地：</p>
+							<h2>香港<span>预计5-9个工作日送达</span></h2>
+						</div>
+						<div class="div5">
+							<p>税费：</p>
+							<h2>由海外卖家承担</h2>
+						</div>
+						<div class="div6">
+							<p>颜色：</p>
+							<h2>棕色</h2>
+						</div>
+						<div class="div7">
+							<p>尺码：</p>
+							<h2>30.5x20x10cm</h2>
+						</div>
+						<div class="div8">
+							<p>数量：</p>
+							<h2>1件<span>还剩1件啦，统统抢光光！</span></h2>
+						</div>
+						<div class="div9">
+							<dl id="div9_dl1">
+								<dt>&#xe613;</dt>
+								<dd>支持分期付款</dd>
+							</dl>
+							<dl><a href="">
+								<dt>&#xe626;</dt>
+								<dd>由Milan Fashion提供</dd>
+							</a></dl>
+							<dl>
+								<dt>&#xe626;</dt>
+								<dd>由走秀网提供售后服务</dd>
+							</dl>
+						</div>
+						<div class="div0">
+							<button class="btn1">立即购买</button>
+							<button id="btn2" class="btn2">放入购物袋</button>
+							<button class="btn3"><span>+</span>收藏</button>
+						</div>
+						<div class="phone">
+							<p>电话订购：<span class="span1">400-888-4499</span><span class="span2">(9:00-19:00)</span></p>
+						</div>
+					</div>
+					<div class="cbox3">
+						<dl>
+							<dt>&#xe642;</dt>
+							<dd>扫一扫二维码分享给朋友</dd>
+						</dl>
+						<ol>
+							<li>分享到:</li>
+							<li><a href="">&#xf0105;</a></li>
+							<li><a href="">&#xf0105;</a></li>
+							<li><a href="">&#xf0105;</a></li>
+							<li><a href="">&#xf0105;</a></li>
+							<li><a href="">&#xf0105;</a></li>
+						</ol>
+					</div>
+				</div>
+				<div class="cbox4">
+					<img id="cbox4_img1" src="images/g2_66_88.jpg" alt="">
+					<img id="cbox4_img2" src="images/g3_66_88.jpg" alt="">
+					<img id="cbox4_img3" src="images/g4_66_88.jpg" alt="">
+					<img id="cbox4_img4" src="images/g5_66_88.jpg" alt="">
+					<img id="cbox4_img5" src="images/g6_66_88.jpg" alt="">
+				</div>
+			</div>
+		</section>
+	<!-- footer -->
+		<footer class="footer1">
+			<div class="box1">
+				<p class="p1"><a href="">&#xe6f6;&nbsp;&nbsp;&nbsp;在线客服</a></p>
+				<p class="p2">&#xe60d;&nbsp;&nbsp;&nbsp;400-888-4499<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>09:00~19:00</span></p>
+				<p class="p3"><a href="">&#xe686;&nbsp;&nbsp;&nbsp;我要吐槽</a></p>
+			</div>
+			<div class="box2">
+				<ol>
+					<li><a href="">招贤纳士</a></li>
+					<li><a href="">CEO邮箱</a></li>
+					<li><a href="">售后服务</a></li>
+					<li><a href="">常见问题</a></li>
+					<li id="footer1_box2_li"><a href="">关税说明</a></li>
+					<li><a href="">物流配送</a></li>
+				</ol>
+			</div>
+			<div id="footer1_box2_div">商品为海外商品，关税由海外卖家承担，如顾客接海关或物流通知缴纳税费，请先行按照国家规定支付，再凭纳税凭证联系走秀客服找海外卖家报销。</div>
+			<div class="box3">
+				<fieldset>
+					<legend>关注我们</legend>
+					<div>
+						<a id="footer1_box3_a" href=""><p>&#xe615;</p></a>
+						<a href=""><p>&#xf0105;</p></a>
+						<a href=""><p>&#xe615;</p></a>
+						<a href=""><p class="last">&#xf0105;</p></a>
+					</div>
+					<form action="">
+						<input type="text" placeholder="订阅最新时尚资讯邮件...">
+						<button class="iconfont">&#xe612;</button>
+					</form>
+				</fieldset>	
+			</div>
+			<div id="footer1_box3_div">&#xe642;</div>
+			<dl>
+				<dt>我们的APP</dt>
+				<dd><a href="">&#xe642;</a></dd>
+			</dl>
+		</footer>
+	<!-- bottom -->
+		<footer class="footer2">
+			<ul>
+				<li><a href="">关于走秀</a></li>
+				<li><a href="">About us</a></li>
+				<li><a href="">媒体报道</a></li>
+				<li><a href="">品牌招商</a></li>
+				<li><a href="">加入走秀</a></li>
+				<li><a href="">网站地图</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">品牌大全</a></li>
+				<li><a href="">邮件订阅</a></li>
+				<li class="last"><a href="">WAP站点</a></li>
+			</ul>
+			<div class="cbox">
+				<p>Copyright © 2008-2018 <span>Xiu.com</span></p>
+				<p>深圳走秀网络科技有限公司 版权所有.粤ICP备07502993号 </p>
+				<img src="http://www.xiustatic.com/static/img/footer/wab.png" alt="">
+				<p>粤公网安备 44030402000804号</p>
+			</div>					
+		</footer>
+	<!-- rightbox -->
+		<div id="rightbox" class="rightbox">
+			<div id="rightbox_div" href="">关闭</div>
+			<dl id="rightbox_dl1"><a href="">
+				<dt>&#xe6f6;</dt>
+				<dd>在线客服</dd>
+			</a></dl>
+			<dl id="rightbox_dl2"><a href="">
+				<dt>&#xead9;</dt>
+				<dd>购物袋</dd>
+			</a></dl>
+			<dl id="rightbox_dl3"><a href="">
+				<dt>&#xe686;</dt>
+				<dd>我要吐槽</dd>
+			</a></dl>
+			<dl id="rightbox_dl4"><a href="">
+				<dt>&#xe76c;</dt>
+				<dd>回到顶部</dd>
+			</a></dl>
+			<b class="yuan">0</b>
+		</div>		
+</body>
+</html>
