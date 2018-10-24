@@ -1,0 +1,21 @@
+@charset "utf-8";
+html,body,div,ul,ol,dl,li,dt,dd,p,input,form,h1,h2,h3,h4,h5,h6,colgroup,col,table,tr,td,fieldset,img{
+	margin:0;
+	padding:0;
+}
+img{
+	display:block;border:0;
+}
+ul,ol,dl,li{
+	list-style: none;
+}
+html,a,u{
+	text-decoration: none;
+	color:#000;
+}
+b,strong,h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+em,i{
+	font-style:normal;
+}

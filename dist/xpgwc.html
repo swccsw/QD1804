@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新品购物车</title>
+	<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="iconfont/iconfont.css">
+		<link rel="stylesheet" href="css/xpgwc.css">
+		<script src = 'js/jquery-1.10.1.min.js'></script>
+		<script src = "js/jquery.cookie.js"></script>
+		<script src = 'js/parabola.js'></script>
+		<script src = 'js/xpgwc.js'></script>
+		<script src = 'js/startMove.js'></script>
+		<script src = "js/ajax.js"></script>
+		<script>
+			$(function(){
+				$.ajax({
+					url:"data/data.json",
+					success:function(arr){
+						// alert(arr);
+						for(var i = 0; i < arr.length; i++){
+							$(`<a href="">
+						<dl>
+							<dt><img src="${arr[i].img}" alt=""></dt>
+							<dd>
+								<p>${arr[i].title}</p>
+								<p>${arr[i].text}</p>
+								<p>${arr[i].money}</p>
+							</dd>
+						</dl>
+					</a>`).appendTo($("#c5_box"));
+						}
+					}
+				})
+				$.ajax({
+					url:"data/nav1.json",
+					success:function(arr){
+						// alert(arr);
+						for(var i = 0; i < arr.length; i++){
+							$(`<dl>
+								<dt><a href="${arr[i].href}">${arr[i].title}</a></dt>
+								<dd>
+									<a href="">${arr[i].text1}</a>
+									<a href="">${arr[i].text2}</a>
+									<a href="">${arr[i].text3}</a>
+									<a href="">${arr[i].text4}</a>
+									<a href="">${arr[i].text5}</a>
+									<a href="">${arr[i].text6}</a>
+									<a href="">${arr[i].text7}</a>
+									<a href="">${arr[i].text8}</a>
+									<a href="">${arr[i].text9}</a>
+									<a href="">${arr[i].text10}</a>
+									<a href="">${arr[i].text11}</a>
+									<a href="">${arr[i].text12}</a>
+								</dd>
+							</dl>`).appendTo($("#bz_box1"));
+						}
+					}
+				})
+				$.ajax({
+					url:"data/nav2.json",
+					success:function(arr){
+						// alert(arr);
+						for(var i = 0; i < arr.length; i++){
+							$(`
+							<dl>
+								<dt><a href="">${arr[i].text1}</a></dt>
+								<dd><a href="">${arr[i].text2}</a></dd>
+							</dl>
+							`).appendTo($("#bz_box2"));
+						}
+					}
+				})
+				$.ajax({
+					url:"data/xpgwc.json",
+					success:function(arr){
+						// alert(arr);
+						for(var i = 0; i < arr.length; i++){
+							$(`
+								<div>
+									<img src="${arr[i].img}" alt="">
+									<div class="d0">
+									<p>${arr[i].title}</p>
+									<h2>${arr[i].text}</h2>
+									<h3>${arr[i].symbol}<span>${arr[i].money}</span></h3>
+								</div>
+								<div class="cm">
+									<p>${arr[i].text1}</p>
+									<a href="">${arr[i].text2}</a>
+									<a href="">${arr[i].text3}</a>
+									<a href="">${arr[i].text4}</a>
+									<a href="">${arr[i].text5}</a>
+								</div>
+								<button id = "${arr[i].id}" class ="section_btn">${arr[i].button}</button>
+							</div>`).appendTo($("#section"));
+						}
+					}
+				})				
+			})
+
+		</script>
+</head>
+<body class="iconfont">
+	<div class="topbox">
+	<!-- header -->
+		<header>
+			<h2 class="h21"><a class="a1" href="http://localhost/ZX/dlzc.html">登录/注册</a></h2>
+			<h2 class="h22"><a class="a1" href="">&#xead9;购物袋<span>0</span>件</a>
+				<div class="gwd">购物袋暂时没有商品</div>
+			</h2>
+			<h2 class="h23"><a class="a1" href="">我的走秀&#xe614;</a>
+				<ol>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">自助退货</a></li>
+					<li><a href="">我的收藏</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li><a href="">全部吐槽</a></li>
+				</ol>
+			</h2>
+			<div >
+				<h1><a href=""><img src="images/logo.jpg" alt=""></a></h1>
+				<ol>
+					<li><a href="http://localhost/ZX/index.html">首页</a></li>
+					<li><a href="http://localhost/ZX/xpgwc.html">新品</a></li>
+					<li><a href="">男士</a></li>
+					<li><a href="">女士</a></li>
+					<li><a href="">品牌</a></li>
+					<li><a href="">专题</a></li>
+					<li class="last"><a href="">手机走秀</a></li>
+				</ol>
+			</div>
+			<form action="">
+				<input type="text" placeholder="请搜索Kenzo试试">
+				<button class="iconfont">&#xe61e;</button>
+			</form>
+		</header>
+	<!-- nav -->
+   		<nav>
+			<ul>
+				<li id="nav_li1" class="li1"><a href="">包装</a></li>
+				<li id="nav_li2"><a href="">服装</a></li>
+				<li id="nav_li3"><a href="">鞋靴</a></li>
+				<li><a href="">腕表</a></li>
+				<li><a href="">配饰</a></li>
+				<li><a href="">妆品</a></li>
+				<li><a href="">生活</a></li>
+				<li><a href="">婴童</a></li>
+				<li class="last"><a href="">豪车</a></li>
+			</ul>
+			<div id="bz" class="bz">
+				<div id="bz_box1" class="box1">
+				</div>
+				<div id="bz_box2" class="box2">
+					<p>热门品牌：</p>
+					<dl>
+						<dt><a href="">Prada</a></dt>
+						<dd><a href="">Prada</a></dd>
+					</dl>
+				</div>
+			</div>
+		</nav>
+	</div>	
+	<!-- bigbox -->
+	<div class="bigbox">
+	<!-- content -->
+		<div class="mrsx">每日新品</div>	
+	<!-- section -->
+		<section id="section">
+			<div id="ball"></div>
+			<!-- <div>
+				<img src="http://7.xiustatic.com/upload/goods20181011/11791462/117914620003/g1_234_312.jpg" alt="">
+				<div class="d0">
+					<p>Saint Laurent</p>
+					<h2>女士印花短袖T恤</h2>
+					<h3>￥<span>3290</span></h3>
+				</div>
+				<div class="cm">
+					<p>可售尺码:</p>
+					<a href="">S</a>
+					<a href="">XL</a>
+					<a href="">L</a>
+					<a href="">M</a>
+				</div>
+				<button>加入购物车</button>
+			</div> -->
+		</section>
+	</div>	
+	<!-- footer -->
+		<footer class="footer1">
+			<div class="box1">
+				<p class="p1"><a href="">&#xe6f6;&nbsp;&nbsp;&nbsp;在线客服</a></p>
+				<p class="p2">&#xe60d;&nbsp;&nbsp;&nbsp;400-888-4499<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>09:00~19:00</span></p>
+				<p class="p3"><a href="">&#xe686;&nbsp;&nbsp;&nbsp;我要吐槽</a></p>
+			</div>
+			<div class="box2">
+				<ol>
+					<li><a href="">招贤纳士</a></li>
+					<li><a href="">CEO邮箱</a></li>
+					<li><a href="">售后服务</a></li>
+					<li><a href="">常见问题</a></li>
+					<li id="footer1_box2_li"><a href="">关税说明</a></li>
+					<li><a href="">物流配送</a></li>
+				</ol>
+			</div>
+			<div id="footer1_box2_div">商品为海外商品，关税由海外卖家承担，如顾客接海关或物流通知缴纳税费，请先行按照国家规定支付，再凭纳税凭证联系走秀客服找海外卖家报销。</div>
+			<div class="box3">
+				<fieldset>
+					<legend>关注我们</legend>
+					<div>
+						<a id="footer1_box3_a" href=""><p>&#xe615;</p></a>
+						<a href=""><p>&#xf0105;</p></a>
+						<a href=""><p>&#xe615;</p></a>
+						<a href=""><p class="last">&#xf0105;</p></a>
+					</div>
+					<form action="">
+						<input type="text" placeholder="订阅最新时尚资讯邮件...">
+						<button class="iconfont">&#xe612;</button>
+					</form>
+				</fieldset>	
+			</div>
+			<div id="footer1_box3_div">&#xe642;</div>
+			<dl>
+				<dt>我们的APP</dt>
+				<dd><a href="">&#xe642;</a></dd>
+			</dl>
+		</footer>
+	<!-- bottom -->
+		<footer class="footer2">
+			<ul>
+				<li><a href="">关于走秀</a></li>
+				<li><a href="">About us</a></li>
+				<li><a href="">媒体报道</a></li>
+				<li><a href="">品牌招商</a></li>
+				<li><a href="">加入走秀</a></li>
+				<li><a href="">网站地图</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">品牌大全</a></li>
+				<li><a href="">邮件订阅</a></li>
+				<li class="last"><a href="">WAP站点</a></li>
+			</ul>
+			<div class="cbox">
+				<p>Copyright © 2008-2018 <span>Xiu.com</span></p>
+				<p>深圳走秀网络科技有限公司 版权所有.粤ICP备07502993号 </p>
+				<img src="http://www.xiustatic.com/static/img/footer/wab.png" alt="">
+				<p>粤公网安备 44030402000804号</p>
+			</div>					
+		</footer>
+	<!-- rightbox -->
+		<div id="rightbox" class="rightbox">
+			<div id="rightbox_div" href="">关闭</div>
+			<dl id="rightbox_dl1"><a href="">
+				<dt>&#xe6f6;</dt>
+				<dd>在线客服</dd>
+			</a></dl>
+			<dl id="rightbox_dl2"><a href="">
+				<dt>&#xead9;</dt>
+				<dd>购物袋</dd>
+			</a></dl>
+			<dl id="rightbox_dl3"><a href="">
+				<dt>&#xe686;</dt>
+				<dd>我要吐槽</dd>
+			</a></dl>
+			<dl id="rightbox_dl4"><a href="">
+				<dt>&#xe76c;</dt>
+				<dd>回到顶部</dd>
+			</a></dl>
+			<b class="yuan">0</b>
+		</div>	
+		<!-- 购物车 -->
+		<div id="sc_right">
+			<ul>
+				<li>
+					
+				</li>
+			</ul>
+		</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆注册</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/dlzc.css">
+	<script src = 'js/tool.js'></script>
+	<script src = 'js/ajax.js'></script>
+	<script src = 'js/dlzc.js'></script>
+</head>
+<body>
+	<!-- header -->
+		<div class="topbox">
+			<header>
+				<div class="logo">
+					<a href="http://localhost/ZX/index.html">
+						<span class="span1">Xiu.com</span>
+						<span class="span2">走秀</span>
+					</a>
+				</div>
+			</header>
+		</div>
+	<!-- section -->
+		<section>
+			<div class="box">
+				<div class="cbox">
+					<img src="images/dlzc.jpg" alt="">
+				</div>
+				<div class="dlzc">
+					<ol id="dlzc_ol">
+						<li id="li1" class="li1">短信登录</li>
+						<li id="li2" class="li2">密码登陆</li>
+					</ol>
+					<div id="dx">
+						<input id="phone" class="txt" type="text" placeholder="手机号码">
+						<input class="psd" type="password" placeholder="短信验证码">
+						<a href="">获取验证码</a>
+						<button>登录</button>
+					</div>
+					<fieldset>
+							<legend>合作网站账号登录</legend>
+							<a class="a1" href=""></a>
+							<a class="a2" href=""></a>
+							<a class="a3" href=""></a>
+							<a class="a4" href=""></a>
+							<a class="a5" href=""></a>
+							<p>登录代表您已同意<span>《走秀网用户协议》</span></p>
+					</fieldset>
+					<div id="loginMsg">
+						<input class="txt" type="text" name = 'username' placeholder="请输入用户名"><br/>
+						<input class="pad" type="password" name = 'password' placeholder="请输入密码"><br/>
+						<button id = 'login'>登录</button>
+						<a id="a1" href="#">立即注册</a>
+					</div>
+					<div id = 'registerMsg'>
+						<input class="txt" type="text" name = 'username' placeholder="请输入用户名"><br/>
+						<input class="pad1" type="password" name = 'password' placeholder="请输入密码"><br/>
+						<input class="pad2" type="password" name = 'repassword' placeholder="再次输入密码"><br/>
+						<button id = 'register'>注册</button>
+						<a id="a2" href="#">立即登陆</a>
+					</div>
+				</div>
+			</div>
+		</section>
+</body>
+</html>
